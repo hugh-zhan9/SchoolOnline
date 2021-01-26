@@ -1,0 +1,6 @@
+com\hugh\util\MD5.class
+com\hugh\util\ResultCode.class
+com\hugh\util\ExceptionUtil.class
+com\hugh\util\RandomUtil.class
+com\hugh\util\ReturnMessage.class
+com\hugh\util\JwtUtils.class

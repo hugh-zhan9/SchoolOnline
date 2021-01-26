@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Cannal_Client" />
+        <module name="Service-ucenter" />
+        <module name="Service-oss" />
+        <module name="Spring-security" />
+        <module name="Service-cms" />
+        <module name="Common-util" />
+        <module name="Api_Gateway" />
+        <module name="Service-order" />
+        <module name="Service-vod" />
+        <module name="Service-user" />
+        <module name="Service-base" />
+        <module name="Service-msm" />
+        <module name="Service-statistics" />
+        <module name="Service-acl" />
+        <module name="Service-edu" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Service-ucenter" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Api_Gateway" options="-parameters" />
+      <module name="Cannal_Client" options="-parameters" />
+      <module name="Common" options="-parameters" />
+      <module name="Common-util" options="-parameters" />
+      <module name="Infrastructure" options="-parameters" />
+      <module name="Service" options="-parameters" />
+      <module name="Service-acl" options="-parameters" />
+      <module name="Service-base" options="-parameters" />
+      <module name="Service-cms" options="-parameters" />
+      <module name="Service-edu" options="-parameters" />
+      <module name="Service-msm" options="-parameters" />
+      <module name="Service-order" options="-parameters" />
+      <module name="Service-oss" options="-parameters" />
+      <module name="Service-statistics" options="-parameters" />
+      <module name="Service-ucenter" options="-parameters" />
+      <module name="Service-user" options="-parameters" />
+      <module name="Service-vod" options="-parameters" />
+      <module name="Spring-security" options="-parameters" />
+    </option>
+  </component>
+</project>
