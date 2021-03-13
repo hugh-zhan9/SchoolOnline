@@ -3,6 +3,7 @@ package com.hugh.acl.helper;
 import com.hugh.acl.entity.Permission;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -22,6 +23,7 @@ public class PermissionHelper {
      */
     public static List<Permission> bulid(List<Permission> treeNodes) {
         List<Permission> trees = new ArrayList<>();
+
         for (Permission treeNode : treeNodes) {
             if ("0".equals(treeNode.getPid())) {
                 treeNode.setLevel(1);

@@ -7,6 +7,7 @@ import com.hugh.acl.service.IndexService;
 import com.hugh.acl.service.PermissionService;
 import com.hugh.acl.service.RoleService;
 import com.hugh.acl.service.UserService;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;

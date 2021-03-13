@@ -14,7 +14,6 @@
     <modules>
         <module>Service-base</module>
         <module>Common-util</module>
-        <module>Spring-security</module>
     </modules>
 
     <dependencies>

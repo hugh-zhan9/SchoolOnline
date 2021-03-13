@@ -8,6 +8,7 @@ import com.hugh.util.ReturnMessage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -80,7 +81,6 @@ public class ChapterController {
         }else
             return ReturnMessage.ng().message("指定章节不存在");
     }
-
 
 }
 
