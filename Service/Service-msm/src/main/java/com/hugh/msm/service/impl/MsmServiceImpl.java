@@ -23,11 +23,11 @@ public class MsmServiceImpl implements MsmService {
     @Override
     public boolean send(String PhoneNumbers, String templateCode, Map<String, Object> param) {
         // 手机号为空直接返回false
-        if(StringUtils.isEmpty(PhoneNumbers)) return false;
-
+        if(StringUtils.isEmpty(PhoneNumbers)){
+            return false;
+        }
         // 不为空的操作
-        DefaultProfile profile =
-        DefaultProfile.getProfile("default", "LTAI4G1VZZE5tJKqbtetwrAy", "xgxnIXMprdszkxXGDlTFGqoPxX3Dxq");
+        DefaultProfile profile = DefaultProfile.getProfile("default", "LTAI4G1VZZE5tJKqbtetwrAy", "xgxnIXMprdszkxXGDlTFGqoPxX3Dxq");
 
         IAcsClient client = new DefaultAcsClient(profile);
         CommonRequest request = new CommonRequest();
@@ -35,16 +35,16 @@ public class MsmServiceImpl implements MsmService {
         //request.setProtocol(ProtocolType.HTTPS);
 
         // 设置相关参数
-        request.setMethod(MethodType.POST);
+        request.setMethod(MethodType.POST); // 提交方式
         request.setDomain("dysmsapi.aliyuncs.com");
-        request.setVersion("2017-05-25");
-        request.setAction("SendSms");
+        request.setVersion("2017-05-25");   //  版本号，不用修改
+        request.setAction("SendSms");       // 设置发送短信，不能修改
 
         // 设置发送相关参数
         request.putQueryParameter("PhoneNumbers",PhoneNumbers);
-        request.putQueryParameter("SignName", "晚青的个人博客");
-        request.putQueryParameter("TemplateCode", templateCode);
-        request.putQueryParameter("TemplateParam", JSONObject.toJSONString(param));
+        request.putQueryParameter("SignName", "晚青的个人博客");       // 签名
+        request.putQueryParameter("TemplateCode", templateCode);        // 模板编号
+        request.putQueryParameter("TemplateParam", JSONObject.toJSONString(param));     // 传输验证码
 
         try {
             // 最终发送

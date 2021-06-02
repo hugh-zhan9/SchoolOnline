@@ -18,9 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * <p>
  * 讲师 服务实现类
- * </p>
  *
  * @author hugh
  * @since 2021-01-05
@@ -41,11 +39,16 @@ public class TeacherServiceImpl extends ServiceImpl<TeacherMapper, Teacher> impl
         return list;
     }
 
+    /**
+     *  翻页查询教师列表
+     * @param page
+     * @return
+     */
     @Override
     public Map getFrontTeacherList(Page page) {
         QueryWrapper<Teacher> queryWrapper = new QueryWrapper<>();
         queryWrapper.orderByDesc("id");
-        baseMapper.selectPage(page,queryWrapper);
+        baseMapper.selectPage(page,queryWrapper);   // select方法将查询到的结果都封装到page对象中
 
         List<Teacher> list = page.getRecords();
         long total = page.getTotal();
@@ -67,6 +70,11 @@ public class TeacherServiceImpl extends ServiceImpl<TeacherMapper, Teacher> impl
         return map;
     }
 
+    /**
+     * 根据教师信息查询课程相关信息
+     * @param id
+     * @return
+     */
     @Override
     public TeacherAboutVo getTeacherAbout(String id) {
         Teacher teacher = baseMapper.selectById(id);
