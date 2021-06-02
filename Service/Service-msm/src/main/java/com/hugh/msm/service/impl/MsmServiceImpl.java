@@ -27,7 +27,8 @@ public class MsmServiceImpl implements MsmService {
             return false;
         }
         // 不为空的操作
-        DefaultProfile profile = DefaultProfile.getProfile("default", "LTAI4G1VZZE5tJKqbtetwrAy", "xgxnIXMprdszkxXGDlTFGqoPxX3Dxq");
+        DefaultProfile profile =
+        DefaultProfile.getProfile("default", "", "");
 
         IAcsClient client = new DefaultAcsClient(profile);
         CommonRequest request = new CommonRequest();
