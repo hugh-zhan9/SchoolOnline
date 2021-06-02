@@ -1,5 +1,0 @@
-com\hugh\servicebase\exception\SchoolException.class
-com\hugh\servicebase\handler\GlobalExceptionHandler.class
-com\hugh\servicebase\handler\MyMetaObjectHandler.class
-com\hugh\servicebase\config\RedisConfig.class
-com\hugh\servicebase\config\Swagger2Config.class

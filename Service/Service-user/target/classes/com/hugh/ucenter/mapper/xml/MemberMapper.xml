@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE com.hugh.acl.mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-com.hugh.acl.mapper.dtd">
-<com.hugh.acl.mapper namespace="com.hugh.ucenter.com.hugh.acl.mapper.MemberMapper">
-
-    <select id="getTotalCountOfUser" resultType="java.lang.Integer">
-        select count(*) from ucenter_member um where DATE(um.gmt_create) = #{date}
-    </select>
-    
-</com.hugh.acl.mapper>
